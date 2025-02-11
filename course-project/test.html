@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherWise Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        :root {
+            --bg-dark: #121212;
+            --text-primary: #ffffff;
+            --text-secondary: #888;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-primary);
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .weather-container {
+            width: 95vw;
+            height: 95vh;
+            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), 
+                        url('https://images.unsplash.com/photo-1534794048419-48e110dded5');
+            background-size: cover;
+            background-position: center;
+            border-radius: 20px;
+            display: flex;
+            overflow: hidden;
+            box-shadow: 0 15px 50px rgba(0,0,0,0.3);
+        }
+
+        .sidebar {
+            width: 300px;
+            background-color: rgba(30,30,30,0.9);
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .location-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .main-content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 30px;
+        }
+
+        .current-temp {
+            font-size: 8rem;
+            font-weight: 300;
+            display: flex;
+            align-items: center;
+        }
+
+        .temp-range {
+            font-size: 1.2rem;
+            margin-left: 20px;
+            opacity: 0.7;
+        }
+
+        .weather-description {
+            font-size: 1.5rem;
+            margin: 10px 0 30px;
+            opacity: 0.8;
+        }
+
+        .forecast-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 20px;
+            margin-top: auto;
+        }
+
+        .forecast-day {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            opacity: 0.7;
+            transition: opacity 0.3s;
+        }
+
+        .forecast-day:hover {
+            opacity: 1;
+        }
+
+        .global-locations {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: auto;
+        }
+
+        .location-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgba(50,50,50,0.5);
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        .download-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: rgba(255,255,255,0.1);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="weather-container">
+        <a href="#" class="download-btn">Download App</a>
+        
+        <div class="sidebar">
+            <div class="location-header">
+                <span>WeatherWise</span>
+                <span class="material-icons">menu</span>
+            </div>
+
+            <div>
+                <p>Brooklyn, New York, USA</p>
+                <p>Friday, January 4</p>
+            </div>
+
+            <div class="global-locations">
+                <div class="location-item">
+                    <span>Liverpool, UK</span>
+                    <span>16°</span>
+                </div>
+                <div class="location-item">
+                    <span>Palermo, Italy</span>
+                    <span>-2°</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="current-temp">
+                13°
+                <span class="temp-range">29° | 13°</span>
+            </div>
+
+            <div class="weather-description">
+                Stormy with partly cloudy
+            </div>
+
+            <div class="forecast-grid">
+                <div class="forecast-day">
+                    <span>Sunday</span>
+                    <span class="material-icons">cloud</span>
+                    <span>28°</span>
+                </div>
+                <div class="forecast-day">
+                    <span>Monday</span>
+                    <span class="material-icons">wb_cloudy</span>
+                    <span>26°</span>
+                </div>
+                <div class="forecast-day">
+                    <span>Tuesday</span>
+                    <span class="material-icons">cloud</span>
+                    <span>27°</span>
+                </div>
+                <div class="forecast-day">
+                    <span>Wednesday</span>
+                    <span class="material-icons">wb_sunny</span>
+                    <span>23°</span>
+                </div>
+                <div class="forecast-day">
+                    <span>Thursday</span>
+                    <span class="material-icons">cloud</span>
+                    <span>30°</span>
+                </div>
+                <div class="forecast-day">
+                    <span>Friday</span>
+                    <span class="material-icons">wb_cloudy</span>
+                    <span>25°</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

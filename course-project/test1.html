@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #1e293b, #0f172a);
+            color: white;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+        .weather-container {
+            width: 100%;
+            max-width: 1200px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            position: relative;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        .location {
+            font-size: 16px;
+            color: #cbd5e1;
+        }
+        .temperature {
+            font-size: 72px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+        }
+        .temp-range {
+            font-size: 16px;
+            margin-left: 15px;
+        }
+        .weather-description {
+            font-size: 20px;
+            color: #cbd5e1;
+        }
+        .weather-details {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+        .detail-box {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+        }
+        .forecast {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .forecast-day {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="weather-container">
+        <div class="location">Brooklyn, New York, USA</div>
+        <div class="temperature">
+            13°
+            <div class="temp-range">H:29° L:13°</div>
+        </div>
+        <div class="weather-description">Stormy with partly cloudy</div>
+        
+        <div class="weather-details">
+            <div class="detail-box">
+                Wind: 12 km/h
+            </div>
+            <div class="detail-box">
+                Humidity: 64%
+            </div>
+        </div>
+        
+        <div class="forecast">
+            <div class="forecast-day">
+                Sun<br>28°
+            </div>
+            <div class="forecast-day">
+                Mon<br>26°
+            </div>
+            <div class="forecast-day">
+                Tue<br>27°
+            </div>
+            <div class="forecast-day">
+                Wed<br>23°
+            </div>
+            <div class="forecast-day">
+                Thu<br>30°
+            </div>
+            <div class="forecast-day">
+                Fri<br>25°
+            </div>
+        </div>
+    </div>
+</body>
+</html>
